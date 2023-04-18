@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <style>
+      /* Style the form container */
+      .form-container {
+        margin: auto;
+        max-width: 500px;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-radius: 5px;
+      }
+
+      /* Style the form heading */
+      .form-heading {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* Style the form input fields */
+      .form-input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 3px;
+        background-color: #fff;
+        font-size: 16px;
+        color: #333;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Style the form submit button */
+      .form-submit {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      /* Style the form submit button on hover */
+      .form-submit:hover {
+        background-color: #3e8e41;
+      }
+
+      /* Style the error message */
+      .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2 class="form-heading">Registration Form</h2>
+      <form onsubmit="return validateForm()">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" class="form-input" required />
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" class="form-input" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-input" required />
+
+        <label for="confirm_password">Confirm Password</label>
+        <input
+          type="password"
+          id="confirm_password"
+          name="confirm_password"
+          class="form-input"
+          required
+        />
+
+        <label for="phonenum" >Phone Number</label>
+        <input type="text" id="phone_number" class="form-input" required>
+
+        <input type="submit" value="Register" class="form-submit" />
+      </form>
+      <div id="error-message"></div>
+    </div>
+
+    <script>
+      function validateForm() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var confirm_password = document.getElementById("confirm_password").value;
+  var phone_number = document.getElementById("phone_number").value;
+  // Check if name is empty
+  if (name == "") {
+    document.getElementById("error-message").innerHTML =
+      "Please enter your name";
+    return false;
+  }
+
+  // Check if email is empty and has valid format
+  if (email == "") {
+    document.getElementById("error-message").innerHTML =
+      "Please enter your email";
+    return false;
+  } else if (!/\S+@\S+\.\S+/.test(email)) {
+    document.getElementById("error-message").innerHTML =
+      "Please enter a valid email address";
+    return false;
+  }
+
+  // Check if password is empty and has minimum length of 8 characters
+  if (password == "") {
+    document.getElementById("error-message").innerHTML =
+      "Please enter your password";
+    return false;
+  } else if (password.length < 8) {
+    document.getElementById("error-message").innerHTML =
+      "Password must be at least 8 characters long";
+    return false;
+  }
+
+  // Check if confirm password is empty and matches password
+  if (confirm_password == "") {
+    document.getElementById("error-message").innerHTML =
+      "Please confirm your password";
+    return false;
+  } else if (password != confirm_password) {
+    document.getElementById("error-message").innerHTML =
+      "Passwords do not match";
+    return false;
+  }
+  // Check if phone number is empty and starts with 91+
+  if (phone_number == "") {
+    document.getElementById("error-message").innerHTML =
+      "Please enter your phone number";
+    return false;
+  } else if (!/^\+91/.test(phone_number)) {
+    document.getElementById("error-message").innerHTML =
+      "Phone number must start with 91+";
+    return false;
+  }
+
+  // All input fields are valid, form can be submitted
+  return true;
+}
+
+        </script>
