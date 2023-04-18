@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Get the user's date of birth
+var dob = new Date(prompt("Enter your date of birth (mm/dd/yyyy):"));
+
+// Calculate the time difference between the user's date of birth and now
+var diff = Date.now() - dob.getTime();
+
+// Convert the time difference into a date object
+var ageDate = new Date(diff);
+
+// Extract the year from the ageDate object
+var age = Math.abs(ageDate.getUTCFullYear() - 1970);
+
+// Output the calculated age to the user
+alert("Your age is: " + age);
+
+</script>
+</html>
