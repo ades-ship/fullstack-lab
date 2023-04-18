@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+  function monthDiff(dt1, dt2) {
+  var months;
+  months = (dt2.getFullYear() - dt1.getFullYear()) * 12;
+  months -= dt1.getMonth() + 1;
+  months += dt2.getMonth() + 1;
+  return months <= 0 ? 0 : months;
+}
+var dt1 = new Date("June 13, 2014 08:11:00");
+var dt2 = new Date("October 19, 2014 11:13:00");
+
+var diff = monthDiff(dt1, dt2);
+// console.log("Time difference in months: " + diff);
+document.write(diff);
+
+</script>
+</html>
