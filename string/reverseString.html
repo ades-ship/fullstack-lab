@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let inputString = prompt("Enter a string:"); // Prompt for user input
+
+let reversedString = ""; // Initialize an empty string to store the reversed string
+
+// Loop through each character in the input string starting from the end
+for (let i = inputString.length - 1; i >= 0; i--) {
+  reversedString += inputString[i]; // Add the current character to the reversed string
+}
+
+alert(`The reversed string is: ${reversedString}`); // Display result using alert
+
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let inputString = prompt("Enter a string:"); // Prompt for user input
+
+let vowels = "aeiouAEIOU"; // Define a string of vowels
+
+let outputString = ""; // Initialize an empty string to store the output
+
+// Loop through each character in the input string
+for (let i = 0; i < inputString.length; i++) {
+  let currentChar = inputString[i];
+
+  // Check if the current character is a vowel
+  if (!vowels.includes(currentChar)) {
+    // If not a vowel, add it to the output string
+    outputString += currentChar;
+  }
+}
+
+alert(`The new string with all vowels removed is: ${outputString}`); // Display result using alert
+
+</script>
+</html>

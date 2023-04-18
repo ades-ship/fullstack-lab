@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Pricing Table</title>
+  <style>
+    /* Style the pricing table */
+    .pricing-table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    /* Style the table header */
+    .pricing-table th {
+      background-color: #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    /* Style the table cells */
+    .pricing-table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    /* Style the table rows */
+    .pricing-table tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    
+    /* Style the table footer */
+    .pricing-table tfoot td {
+      background-color: #ddd;
+      font-weight: bold;
+      text-align: center;
+    }
+    
+    /* Style the button */
+    .btn {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    
+    /* Style the button on hover */
+    .btn:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pricing Table</h1>
+  <table class="pricing-table">
+    <thead>
+      <tr>
+        <th>Plan</th>
+        <th>Price</th>
+        <th>Features</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Basic</td>
+        <td>$9.99/month</td>
+        <td>
+          <ul>
+            <li>5 GB storage</li>
+            <li>1 website</li>
+            <li>24/7 support</li>
+          </ul>
+        </td>
+        <td><a href="#" class="btn">Sign up</a></td>
+      </tr>
+      <tr>
+        <td>Pro</td>
+        <td>$19.99/month</td>
+        <td>
+          <ul>
+            <li>10 GB storage</li>
+            <li>3 websites</li>
+            <li>24/7 support</li>
+            <li>Custom domain</li>
+          </ul>
+        </td>
+        <td><a href="#" class="btn">Sign up</a></td>
+      </tr>
+      <tr>
+        <td>Premium</td>
+        <td>$29.99/month</td>
+        <td>
+          <ul>
+            <li>20 GB storage</li>
+            <li>5 websites</li>
+            <li>24/7 support</li>
+            <li>Custom domain</li>
+            <li>SEO optimization</li>
+          </ul>
+        </td>
+        <td><a href="#" class="btn">Sign up</a></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3"></td>
+        <td><a href="#" class="btn">Compare plans</a></td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>
